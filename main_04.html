@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>MegaProg</title>
 	<!--<link rel="stylesheet" href="css/bootstrap.css" type="text/css">-->
-	<!--<link rel="stylesheet" href="https://github.com/userko001/final_proj/blob/master/CSS/bootstrap.css" type="text/css">-->
+	<!--<link rel="stylesheet" href="CSS/bootstrap.css" type="text/css">-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css" type="text/css">
-	<script src="https://github.com/userko001/final_proj/blob/master/JS/jquery-3.3.1.js"></script>
+	<script src="JS/jquery-3.3.1.js"></script>
 	<script>
 		function ff()
 		{
@@ -20,15 +20,15 @@
 		{
 			document.getElementsByClassName('mid-content-text')[0].innerHTML+="asdasd<br>";
 			console.log(document.getElementById('aa'));
-			//document.getElementById('aa').src="https://github.com/userko001/final_proj/blob/master/JS/storiteling.js";
-			load_js2('https://github.com/userko001/final_proj/blob/master/JS/storiteling.js');
+			//document.getElementById('aa').src="JS/storiteling.js";
+			load_js2('JS/storiteling.js');
 			setTimeout("document.getElementsByClassName('mid-content-text')[0].innerHTML+=text",1000);
 			document.getElementById('inner-span').removeChild(document.getElementById('dynamic_id'));
 			setTimeout("document.getElementsByClassName('mid-content-text')[0].innerHTML+='<br><br>'",1000);
 			
 			function ff2()
 			{
-				load_js2('https://github.com/userko001/final_proj/blob/master/JS/memorypalace.js');
+				load_js2('JS/memorypalace.js');
 				setTimeout("document.getElementsByClassName('mid-content-text')[0].innerHTML+=text",1500);
 				document.getElementById('inner-span').removeChild(document.getElementById('dynamic_id'));
 			}
@@ -48,7 +48,7 @@
 			var head= document.getElementsByTagName('head')[0];
 			var script= document.createElement('script');
 			script.type= 'text/javascript';
-			script.src= 'https://github.com/userko001/final_proj/blob/master/JS/storiteling.js';
+			script.src= 'JS/storiteling.js';
 			script.id='dynamic_id';
 			head.appendChild(script);
 		}
@@ -66,7 +66,7 @@
 		function fill_content(s)
 		{
 			var content = document.getElementsByClassName('mid-content-text')[0];
-			load_js2('https://github.com/userko001/final_proj/blob/master/JS/'+s);
+			load_js2('JS/'+s);
 			function get()
 			{
 				content="<h3>"+title+"</h3>";
@@ -166,7 +166,7 @@
 		<!--  TOP MENU  -->
 		<div class="top-menu">
 			<div class="site-name">
-				<h4>Сайт для вивчення мнемонічних технік_04</h4>
+				<h4>Сайт для вивчення мнемонічних технік_05</h4>
 			</div>
 			<div class="top-menu-1">
 				<ul>
