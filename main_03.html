@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MegaProg</title>
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+	<script src="js/jquery-3.3.1.js"></script>
+	<script>
+		function ff()
+		{
+			console.log(document.getElementsByClassName('mid-content-text')[0].innerText);
+		};
+		//window.onload = ff;
+		//window.onload = ff;
+		
+		function ff1()
+		{
+			document.getElementsByClassName('mid-content-text')[0].innerHTML+="asdasd<br>";
+			console.log(document.getElementById('aa'));
+			//document.getElementById('aa').src="js/storiteling.js";
+			load_js2('js/storiteling.js');
+			setTimeout("document.getElementsByClassName('mid-content-text')[0].innerHTML+=text",100);
+			document.getElementById('inner-span').removeChild(document.getElementById('dynamic_id'));
+			setTimeout("document.getElementsByClassName('mid-content-text')[0].innerHTML+='<br><br>'",100);
+			
+			function ff2()
+			{
+				load_js2('js/memorypalace.js');
+				setTimeout("document.getElementsByClassName('mid-content-text')[0].innerHTML+=text",150);
+				document.getElementById('inner-span').removeChild(document.getElementById('dynamic_id'));
+			}
+			setTimeout(ff2,100);
+		};
+		
+		function fill_right_bar()
+		{
+			//alert("asdasds");
+			var content = document.getElementById('right-sidebar-content');
+			var ff = localStorage.getItem('kk');
+			//alert(ff);
+			content.innerHTML+=ff;
+		};
+		
+		document.addEventListener('DOMContentLoaded', function() {
+		fill_right_bar();
+		}, false);
+		
+		
+	
+		function load_js()
+		{
+			var head= document.getElementsByTagName('head')[0];
+			var script= document.createElement('script');
+			script.type= 'text/javascript';
+			script.src= 'js/storiteling.js';
+			script.id='dynamic_id';
+			head.appendChild(script);
+		}
+		
+		function load_js2(s)
+		{
+			var head= document.getElementById('inner-span');
+			var script= document.createElement('script');
+			script.type= 'text/javascript';
+			script.src= s;
+			script.id='dynamic_id';
+			head.appendChild(script);
+		}
+		
+		function fill_content(s)
+		{
+			var content = document.getElementsByClassName('mid-content-text')[0];
+			load_js2('js/'+s);
+			function get()
+			{
+				content="<h3>"+title+"</h3>";
+				content+="<div style='text-align:center;'><img src='"+pic+"'></div>";
+				content+="<br>"+text;
+				document.getElementsByClassName('mid-content-text')[0].innerHTML=content;
+			}
+			//setTimeout("document.getElementsByClassName('mid-content-text')[0].innerHTML=text",500);
+			setTimeout(get,500);
+			document.getElementById('inner-span').removeChild(document.getElementById('dynamic_id'));
+			document.getElementById('hidden1').value=s;
+		}
+		
+		function put_in(item,val)
+		{
+			localStorage.setItem(item, val);
+		}
+		function get_out(item)
+		{
+			alert(localStorage.getItem(item));
+		}
+		
+		
+		
+		function put_in_from_input()
+		{
+		//localStorage.setItem('item', "");
+			//alert('1');
+			var h = document.getElementById('hidden1').value;
+			var val= localStorage.getItem('item');
+			
+			if(val.indexOf(h)==-1)
+			{
+				val+=',' +document.getElementById('hidden1').value;
+				localStorage.setItem('item', val);
+			}
+			else
+				alert("Sorry: already exist");
+				
+			get_out_from_input();
+		}
+		function get_out_from_input()
+		{
+			var val= localStorage.getItem('item');
+			var part = val.split(",");
+			console.log(part);
+			var e1 = document.getElementById('right-sidebar-content');
+			e1.innerHTML="";
+			for(var i=1;i<part.length;i++)
+			{
+				e1.innerHTML+=part[i]+"<br>";
+				console.log(part[i]);
+			}
+		}
+		
+		
+
+		
+		
+		
+	</script>
+</head>
+<body>
+	<!--    TOP     -->
+	<div class="top">
+		<div class="logo">
+			<img class="logo" src="img/logo.jpg">
+		</div>
+		<!--  TOP MENU  -->
+		<div class="top-menu">
+			<div class="site-name">
+				<h4>Top menu</h4>
+			</div>
+			<div class="top-menu-1">
+				<ul>
+					<li>Головна</li>
+					<li>item2</li>
+					<li>Особистий кабінет</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<!--    MID     -->
+	<div class="middle">
+		<!--  LEFT SIDEBAR-->
+		<div class="left-sidebar">
+			<h6>Left-sidebar</h6>
+			<ul>
+				<li>
+					<a href="#">Мнемонічні прийоми</a>
+					<div class="left-sidebar-sub">
+						<ul>
+							<li><a href="#" onclick="fill_content('storiteling.js');">Сторітелінг</a></li>
+							<li><a href="#" onclick="fill_content('memorypalace.js');">Палац пам'яті</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#">Вправи</a>
+					<div class="left-sidebar-sub">
+						<ul>
+							<li><a href="#">111</a></li>
+							<li><a href="#">222</a></li>
+							<li><a href="#">333</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#">Morbi leo risus</a>
+					<div class="left-sidebar-sub">
+						<ul>
+							<li><a href="#">111</a></li>
+							<li><a href="#">222</a></li>
+							<li><a href="#">333</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#">Porta ac consectetur ac</a>
+					<div class="left-sidebar-sub">
+						<ul>
+							<li><a href="#">111</a></li>
+							<li><a href="#">222</a></li>
+							<li><a href="#">333</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--  MID CONTENT-->
+		<div class="mid-content">
+			<h3>MidContent</h3>	
+			<input type=button onclick="put_in_from_input();" value="put in">
+			<input type=button onclick="get_out_from_input();" value="get out">
+			<input type=button onclick="localStorage.setItem('item','');document.getElementById('right-sidebar-content').innerHTML='';" value="clear">
+			<input type="hidden" id="hidden1">
+			<div class="mid-content-img">
+			</div>
+			<span id="inner-span"></span>
+			<div id="mid-content-text-id" class="mid-content-text" >
+				
+			</div>
+			
+			
+		</div>
+		<!--  RIGHT SIDEBAR-->
+		<div class="right-sidebar">
+			<h5>Right<br>Sidebar</h5>
+			<div id="right-sidebar-content">
+			</div>
+		</div>
+	</div>
+	
+	<div class="bottom">
+	
+	
+		<div class="btn-group">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Right-aligned menu
+  </button>
+  <div class="dropdown-menu dropdown-menu-right">
+    <button class="dropdown-item" type="button">Action</button>
+    <button class="dropdown-item" type="button">Another action</button>
+    <button class="dropdown-item" type="button">Something else here</button>
+  </div>
+</div>
+	
+	
+	
+	</div>
+	
+</body>
+</html>

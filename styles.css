@@ -1,0 +1,288 @@
+.top
+{
+	display:block;
+	/*border:1px green solid;*/
+	margin-bottom:20px;
+	
+	/*boo*/
+	background-color: #957bbe;
+    border-radius: 15px 15px 15px 15px;
+	
+}
+body
+{
+	padding:5px;
+}
+
+.logo
+{
+	display:table-cell;
+	
+	position:relative;
+	width:198px;
+	/*height:152px;*/
+	min-width:198px;
+	vertical-align:middle;
+	background-color:#0A1241;
+	border-radius: 15px 0 0 15px;
+}
+.logo img
+{
+	border:none;
+	
+}
+
+.top-menu
+{
+	display:table-cell;
+	/*border:1px green solid;*/
+	vertical-align:top;
+	text-align:right;
+	height:152px;
+	width:100%;
+	
+	/*boo*/
+	background-color: #957bbe;
+    border-radius: 15px;
+}
+
+.site-name
+{
+	display:block;
+	height:100px;
+	/*background-color:lime;*/
+	height:79%;
+	width:100%;
+	padding:5px;
+	/*boo*/
+	background-color: #957bbe;
+    border-radius: 15px;
+}
+
+.top-menu-1 ul
+{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	background-color: #957bbe;
+	border-radius: 15px;
+	margin-right:4px;
+	margin-bottom:4px;
+	
+}
+
+.top-menu .top-menu-1 ul li
+{
+	/*background-color:gold;*/
+	display:inline-block;
+	
+	color: #fff;
+  background-color: #28a745;
+  border-color: #17a2b8;
+  border-radius: 15px;
+  padding:2px;
+  text-align:center;
+  width:150px;
+  
+	
+}
+.top-menu-1
+{
+	position:relative;
+	display:block;
+	height:20%;
+	
+}
+
+
+.left-sidebar
+{
+	display:table-cell;
+	width:200px;
+	min-width:200px;
+	border:1px #17a2b8 solid;
+	height:500px;
+	padding:0px;
+	border-radius: 15px 0 0 15px;
+}
+
+.right-sidebar
+{
+	display:table-cell;
+	width:200px;
+	min-width:200px;
+	border:1px #17a2b8 solid;
+	padding:5px;
+	border-radius: 0 15px 15px 0;
+}
+
+.mid-content
+{
+	z-index:5;
+	position:relative;
+	display:table-cell;
+	width:100%;
+	min-width:400px;
+	margin-left:10px;
+	margin-right:10px;
+	border-top:1px #17a2b8 solid;
+	border-bottom:1px #17a2b8 solid;
+	padding-left:5px;
+	padding-right:5px;
+	
+}
+
+.bottom
+{
+	margin-top:20px;
+	height:100px;
+	display:block;
+	border:1px green solid;
+	background-color:gold;
+	border-radius: 15px 15px 15px 15px;
+}
+
+.list-group-item-action:hover
+{
+	z-index: 2;
+	color: #fff;
+	background-color: #007bff;
+	border-color: #007bff;
+}
+
+.left-sidebar ul
+{
+	list-style:none;
+	margin-left:0px;
+	padding:0px;
+	text-decoration: none;
+	/*bootstrap*/
+	color: #007bff;
+	background-color: transparent;
+	background-image: none;
+	border-color: #007bff;
+	border-radius: 15px 0 0 0;
+}
+
+.left-sidebar ul li
+{
+	/*width:100%;*/
+	position:relative;
+	text-decoration: none;
+	
+	/*bootstrap*/
+	
+  display: block;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.left-sidebar ul li:hover
+{
+	/*background-color:gold;*/
+	text-decoration: none;
+	color: #fff;
+	background-color: #007bff;
+	border-color: #007bff;
+}
+
+.left-sidebar ul li:hover a
+{
+	color:white;
+	text-decoration: none;
+}
+
+.left-sidebar ul li:hover .left-sidebar-sub
+{
+	display:block;
+	position:absolute;
+	left:197px;
+	top:-1px;
+}
+
+.left-sidebar-sub
+{
+	z-index:51;
+	display:none;
+	width:auto;
+	min-width:100px;
+	text-align:center;
+	/*background-color:green;*/
+	
+	/*bootstrap*/
+	
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+	
+}
+
+.left-sidebar ul li .left-sidebar-sub ul li
+{
+	/*background-color:lime;*/
+}
+
+.left-sidebar ul li .left-sidebar-sub ul li:hover a
+{
+	/*background-color:yellow;*/
+	color:white;
+}
+
+.left-sidebar ul li .left-sidebar-sub ul li a
+{
+	color: #007bff;
+}
+ 
+.add-button span
+{
+	position:absolute;
+	left:3.5px;
+	top:-5px;
+}
+
+.add-button span a
+{
+	text-decoration:none;
+}
+
+.add-button
+{
+	position: absolute;
+	top:5px;
+	right: 5px;
+	display:inline-block;
+	font-weight:bold;
+	color:red;
+	border:1px green solid;
+	border-radius:10px;
+	height:20px;
+	width:20px;
+	text-align:center;
+	left:
+}
+
+.add-button:hover
+{
+	background-color:lightgray;
+	cursor: pointer;
+}
+
+.del_button
+{
+	position:relative;
+	text-decoration: none;
+	
+	/*bootstrap*/
+	padding:1px;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  text-align:center;
+}
+.del_button:hover
+{
+	background-color:lightgray;
+	cursor: pointer;
+}
