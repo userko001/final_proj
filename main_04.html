@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>MegaProg</title>
-	<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+	<!--<link rel="stylesheet" href="css/bootstrap.css" type="text/css">-->
+	<!--<link rel="stylesheet" href="https://github.com/userko001/final_proj/blob/master/CSS/bootstrap.css" type="text/css">-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css" type="text/css">
 	<script src="js/jquery-3.3.1.js"></script>
 	<script>
@@ -95,6 +97,11 @@
 			//alert('1');
 			var h = document.getElementById('hidden1').value;
 			var val= localStorage.getItem('item');
+			if(val==null)
+			{
+				//localStorage.setItem("");
+				val="";
+			}
 			
 			if(val.indexOf(h)==-1)
 			{
@@ -109,6 +116,11 @@
 		function get_out_from_input()
 		{
 			var val= localStorage.getItem('item');
+			if(val==null)
+				{
+					//localStorage.setItem="";
+					val="";
+				}
 			var part = val.split(",");
 			console.log(part);
 			var e1 = document.getElementById('right-sidebar-content');
